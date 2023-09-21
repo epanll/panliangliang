@@ -1,0 +1,5 @@
+1./* 返回3个整数中的最大值 */
+int Max( int A, int B, int C )
+{ 
+    return A > B ? A > C ? A : C : B > C ? B : C;
+}
