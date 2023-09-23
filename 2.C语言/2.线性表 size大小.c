@@ -147,8 +147,12 @@ int search_list_size(list_t *list, int data)
 		if(list->data[i] == data)
 		{
 			printf("%d is locate in space %d \n", data, i+1);
+			return 0;
 		}
-
+	
+	//如果没有找到提示操作者
+	printf("表中没有该数据!\n");
+	
 	return 0;
 }
 
