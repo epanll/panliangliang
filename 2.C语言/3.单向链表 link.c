@@ -59,7 +59,7 @@ int add_index_link(link_t *head, int index, int data)
     while(index--)
     {
         head = head->next;
-        if(head->next == NULL)
+        if(head == NULL)
         {
             printf("位置过大,超出链表范围!\n");
             return -1;
@@ -104,7 +104,7 @@ int del_index_link(link_t *head, int index)
     while(index--)
     {
         head = head->next;
-        if(head->next == NULL)
+        if(head == NULL)			
         {
             printf("位置过大,超出链表范围!\n");
             return -1;
@@ -168,7 +168,8 @@ int change_index_link(link_t *head, int index, int data)
 int search_link(link_t *head, int data)
 {
     int index = 0;
-    head = head->next;
+	
+    head = head->next;	//跳过头结点
     while(head != NULL)
     {
         index ++;
