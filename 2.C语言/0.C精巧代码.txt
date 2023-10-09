@@ -3,3 +3,9 @@ int Max( int A, int B, int C )
 { 
     return A > B ? A > C ? A : C : B > C ? B : C;
 }
+
+2.//交换a和b的值
+void swap(int *a, int *b)
+{
+	*a ^ = *b ^ = *a ^ = *b;
+}
