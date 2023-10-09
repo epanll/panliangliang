@@ -60,7 +60,7 @@ void add_front_dblink(dblink_t * head, int data)
     newnode->front = head;
     newnode->next = head->next;
 
-    head->next->front = newnode;    //插入一个新的节点,有三个节点需要修改关系
+    head->next->front = newnode;    //插入一个新的节点,有三个节点需要修改关系(或者4条链条需要动)
     head->next = newnode;
     
     return;
@@ -126,6 +126,11 @@ void change_dblink(dblink_t * head, int index, int data)
     while(index--)
     {
         head = head->next; 
+		if(head->next->next == NULL)
+		{
+			printf("修改数据，指定位置过大!\n");
+			return;
+		}
     }
 
     head->data = data;
