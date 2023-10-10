@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-//选择排序:不停的比较,最终确定插入数据的位置
+//插入排序:不停的比较,最终确定插入数据的位置
 
 int insertion_sort(int *array, int size)
 {
