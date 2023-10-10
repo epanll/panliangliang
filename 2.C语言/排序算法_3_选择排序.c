@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-//选择排序
+//????
 
 int selection_sort(int *array, int size)
 {

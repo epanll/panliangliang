@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//冒泡排序
+
 int bubble_sort(int *array, int size)
 {
     int i, j, flag, temp;
